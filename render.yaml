@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: breatheesg-backend
+    env: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "0"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://breatheesg-frontend.onrender.com"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: breatheesg-db
+          property: connectionString
+
+  - type: web
+    name: breatheesg-frontend
+    env: docker
+    rootDir: frontend
+    plan: free
+    envVars:
+      - key: API_UPSTREAM
+        value: "https://breatheesg-backend.onrender.com"
+
+databases:
+  - name: breatheesg-db
+    plan: free

@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: breathe
+      POSTGRES_USER: breathe
+      POSTGRES_PASSWORD: breathe
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      DJANGO_SECRET_KEY: dev-insecure
+      DJANGO_ALLOWED_HOSTS: "localhost,127.0.0.1"
+      DJANGO_DEBUG: "1"
+      DATABASE_URL: "postgres://breathe:breathe@db:5432/breathe"
+      CORS_ALLOWED_ORIGINS: "http://localhost:5173"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

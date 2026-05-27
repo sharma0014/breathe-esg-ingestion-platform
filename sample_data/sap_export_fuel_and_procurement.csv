@@ -1,0 +1,7 @@
+Plant;Belegdatum;Materialkurztext;Menge;ME;Materialbeleg;Lieferant;Betrag in Belegwährung;Währung
+1000;15.04.2026;Diesel fuel (truck fleet);1.250,50;L;4900001123;Aral AG;;
+1000;16.04.2026;Gasoline (company cars);320,00;L;4900001124;Shell Deutschland;;
+2000;18.04.2026;Diesel fuel (forklifts);75,2;gal;4900001125;Local Fuel Supplier;;
+1000;21.04.2026;Office supplies - toner;;;5100007788;Staples GmbH;1.245,99;EUR
+2000;22.04.2026;IT equipment - laptops;;;5100007789;Dell GmbH;12.990,00;EUR
+2000;23.04.2026;Consulting services;;;5100007790;Consulting Partner;5.000,00;

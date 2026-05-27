@@ -1,0 +1,6 @@
+Type,Traveler,Booking Date,Start Date,Origin,Destination,Distance (mi),Amount,Currency
+FLIGHT,Alice Johnson,2026-04-02,2026-04-10,BER,LHR,,450.20,EUR
+FLIGHT,Bob Singh,2026-04-05,2026-04-12,MUC,JFK,4040,1280.00,EUR
+HOTEL,Alice Johnson,2026-04-02,2026-04-10,,, ,620.00,EUR
+CAR,Bob Singh,2026-04-05,2026-04-12,,,120,85.50,EUR
+UNKNOWN,Charlie Example,2026-04-06,2026-04-15,SFO,LAX,337,120.00,USD

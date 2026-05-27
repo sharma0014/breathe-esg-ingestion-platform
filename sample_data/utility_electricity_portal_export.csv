@@ -1,0 +1,4 @@
+Meter ID,Service Address,Billing Period Start,Billing Period End,Usage,Usage Unit,Cost,Currency
+DE-BER-0001,"Berlin Plant, Example Str 1",2026-03-18,2026-04-16,125400,kWh,30120.55,EUR
+DE-MUC-0002,"Munich DC, Beispielweg 99",18/04/2026,17/05/2026,"98,7",MWh,"22.540,10",EUR
+DE-MUC-0003,"Munich DC, Beispielweg 99",2026-05-18,2026-06-16,,kWh,0,EUR
