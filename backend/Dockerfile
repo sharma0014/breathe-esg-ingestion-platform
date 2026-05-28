@@ -19,4 +19,4 @@ ENV DJANGO_DEBUG=0
 
 EXPOSE 8000
 
-CMD python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn breathe_backend.wsgi:application --bind 0.0.0.0:${PORT:-8000}
+CMD python manage.py migrate --noinput && python manage.py seed_demo && python manage.py collectstatic --noinput && gunicorn breathe_backend.wsgi:application --bind 0.0.0.0:${PORT:-8000}
